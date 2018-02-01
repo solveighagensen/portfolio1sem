@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <!-- Skalerer hjemmesiden i forholdet 1:1 på mobile enheder  -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Solveig L. Hagensen</title>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- Henter sociale medie ikonerne ned + henter fonten Raleway -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Samantisk tag  -->
+  <header>
+    <!-- Henviser til headerbillede på forsiden  -->
+    <!-- (Det er en fejl i min kode, da min style skulle have været i min css)  -->
+    <div class="picture" style="background-image: url('assets/images/frontpage_image_top_banner.jpg');">
+      <!-- En usynlig boks der ligger rundt om menubaren -->
+      <div class="inner">
+        <a href="index.html" class="active">
+          <!-- Henviser til logoet. Alt = den tekst der står der vises, hvis billedet ikke kan loades-->
+          <img id="logo" src="assets/images/logo.png" alt="logo">
+          <!-- Overskrift  -->
+          <h1>Solveig Leivdal Hagensen </h1>
+        </a>
+        <!-- Menubar ........ Samantisk tag  -->
+        <nav>
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="ommig.html">Om mig</a></li>
+            <li><a href="kontakt.html">Kontakt</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!--  -->
+  </header>
+  <!-- De 4 billeder på forsiden +"Multimediedesignstuderende"-defination  -->
+  <!-- Clearfix: "Sørge for at elementet flyder rundt om det andet element - næste linje" -->
+  <!-- I stedet for at lave section1 kunne jeg have lavet en padding-top på min wrapper -->
+  <div id="section1" class="clearfix">
+    <div class="wrapper">
+      <div class="intro">
+        <h2>Multimediedesignstuderende</h2>
+        <!-- Her linker jeg til de 4 billeder på forsiden og laver de bokse de skal være indeni -->
+      </div>
+      <div class="image_box_section1">
+        <img src="assets/images/costume_magasin.jpg" alt="magasin">
+      </div>
+      <div class="image_box_section1">
+        <img src="assets/images/chanel_top_forside.jpg" alt="chanel">
+        <img src="assets/images/royalcopenhagen_top.jpg" alt="reklame">
+      </div>
+      <!-- Bo bedre skal floate til højre, mens de andre billeder skal floate venstre, derfor forskellige class -->
+      <div class="image_box_section1 magasin3">
+        <img src="assets/images/bo_bedre_magsin.jpg" alt="magasin">
+      </div>
+    </div>
+  </div>
+  <!-- Kontaktboks  -->
+  <div id="section2">
+    <div class="wrapper">
+      <div class="intro">
+        <img src="assets/images/solveig_section2_round.jpg" alt="">
+        <h2>Kontakt mig</h2>
+        <p>Noget på hjertet?</p>
+        <p>Du er mere end velkommen til at skrive til mig</p>
+      </div>
+      <div class="form">
+
+        <!-- kontaktformular-defination  -->
+        <form>
+          <!-- Placeholder: Der beskriver den forventede værdi af indtastningsfeltet -->
+          <input type="text" name="fornavn" placeholder="Navn">
+          <input type="email" name="email" placeholder="E-mail">
+          <textarea name="dinbesked" cols="30" rows="10" placeholder="Besked"></textarea>
+        </form>
+      </div>
+    </div>
+  </div>
+  <footer id="footer" class="clearfix">
+    <!-- Kontaktinformation -->
+    <div class="wrapper">
+      <div class="left_column">
+        <div class="inner">
+          <h2>Kontaktinformation</h2>
+          <p>Solveig Leivdal Hagensen </p>
+          <p>Adresse: Kochsgade 12, 2. 5000, Odense C</p>
+          <p>Tlf: 31 72 58 33</p>
+          <p>Mail: Solveighagensen@hotmail.com</p>
+        </div>
+      </div>
+      <!-- Sociale medier bokse  -->
+      <div class="right_column">
+        <div class="inner">
+          <h2>Follow</h2>
+          <!-- Henviser til mine sociale medier - fortæller det skal være cirkler og target blank fortæller at den skal åbne i ny fane -->
+          <div class="circles">
+            <!-- a = linker fra en side til en anden. Dog ikke uden href  -->
+            <!-- aria-hidden = Sørger for at oplæsningsenheder ikke læser de sociale medie ikoner op  -->
+            <!-- Target=blank = Gør at den åbner i en ny fane  -->
+            <!-- i= kursiv. i bliver konverteret til et element -->
+            <a href="https://www.instagram.com/solveighagensen/" target="_blank" class="round">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                        </a>
+            <a href="https://www.linkedin.com/in/solveig-hagensen-51167a129/" target="_blank" class="round">
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+            <a href="https://www.facebook.com/solveig.hagensen" target="_blank" class="round">
+                            <i class="fa fa-facebook-official" aria-hidden="true"></i>
+                        </a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Samantisk tag  -->
+  </footer>
+  <!-- Copyright-defination  -->
+  <div id="copyright">
+    <div class="copytext">
+      <!-- &copy = copyrightsymbolet -->
+      &copy; Solveig Hagensen
+    </div>
+  </div>
+</body>
+
+</html>

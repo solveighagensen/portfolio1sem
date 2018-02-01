@@ -1,0 +1,505 @@
+body {
+  background-color: #D3d0d0; /*Lysegrå*/
+  margin: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+/*Billeder + tekst i header */
+header {
+  width: 100%;
+  height: 630px;
+  background-image: url("../image/forside_header.jpg");
+  margin: 0px;
+  text-align: center;
+}
+/*Clearfix = Starte forfra på en "tom linje" */
+.clearfix:after {
+  content: "";
+  display: table; /* Gør baggrunden til et element */
+  clear: both;  Jeg cleare alt det jeg har arbejdet med - så jeg kan starte fra ny i venstre hjørne () */
+}
+
+#logo {
+  /*Logo placering */
+  position: absolute;
+  left: -2%;
+  top: -50%;
+  transform: scale(.6);
+}
+
+/*Resetter skrifttyperne og links = så den ikke bruger standard padding og margin - så jeg selv bestemmer */
+/* Dog kan der være nogle få undtagelser */
+h1, h2, h3, h4, h5, h6, p, a, ul, li {
+  padding: 0;
+  margin: 0;
+}
+
+header .picture {
+  /*Header-billeder */
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 630px;
+  position: relative;
+}
+
+/*Laver en sort boks der ligger over picture-classen (headerbilledet)  Styrer bannerets after-effekt*/
+header .picture:after {
+  height: 100%;
+  width: 100%;
+  content: ""; /* Snyde browseren til at tro der er noget indhold */
+  display: block; /* Gør det til et element */
+  position: absolute; /* Gør at den sorte boks kun ligger sig på billedet (da den har en posotion: relative)
+  /*Billedeplacering */
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.3;
+  /* Gennemsigtighed */
+}
+
+header .picture .inner {
+  /* Solveig Leivdal Hagensen + menubar placering */
+  position: relative; /* Man kan flytte den indenfor boksen og placere den */
+  z-index: 9;
+}
+
+ /*Links */
+header .picture a {
+  /* Solveig Leivdal Hagensen + logo */
+  text-decoration: none;
+  /* Fjerner understregningen */
+}
+
+header .picture h1 {
+  /* Solveig Leivdal Hagensen */
+  font-size: 52px;
+  font-weight: 300;
+  color: white;
+}
+
+header .picture .bottom {
+  /* En multimediedesigners udvikling + magasin, branding, SoMe.......*/
+  position: absolute;
+  bottom: 35px;
+  /* Placering i forhold til bunden */
+  z-index: 1; /*Placering*/
+  text-align: center;
+  width: 100%;
+}
+
+header .picture h2 {
+  /* h2 En multimediedesigners udvikling + magasin, branding, SoMe....... */
+  font-size: 22px;
+  /*Skriftstørrelse */
+  font-style: italic;
+  /*Skrå */
+  color: white;
+  /* Farve*/
+}
+
+h1 {
+  /* Solveig Leivdal Hagensen placering */
+  margin: 0px;
+  padding-top: 30px;
+  color: white;
+}
+
+.wrapper {
+  /*Den der holder hele siden */
+  margin: auto;
+  max-width: 1200px;
+}
+
+ul {
+  /* Menubar */
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  /*Det der rækker ud over boksen bliver skjult */
+  margin-top: 25px;
+}
+
+a.active {
+  /* menubar viser den sarte lyserøde, når man er på den givet side*/
+  color: #d6bcba;
+  font-weight: 900;
+  /*Gør at det bliver tykkere */
+}
+
+a.active h1 {
+  /* Solveig Leivdal Hagensen viser den sarte lyserøde, når man er på den givet side*/
+  color: #d6bcba;
+  font-weight: 900;
+  /*Gøt at det bliver tykkere */
+}
+
+li {
+  /*Menubarens placering og form */
+  display: inline;
+  /*Ligger sig på en linje i stedet for række*/
+  padding: 0px;
+  margin: 0px;
+}
+
+/* Li a = Alle links under en liste (menubaren) */
+li a {
+  /*Menubar */
+  display: inline-block;
+  color: white;
+  text-align: center;
+  transition: 300ms;
+  /* Hvor lang tid det tager at skifte */
+  padding: 0px 30px 0px 0px; /*Top og med uret*/
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0px;
+  margin-right: 30px;
+  border-right: 1px #cad2da solid; /* Giver dem de der streger imellem */
+}
+
+li:last-child a {
+  /*Kontakt i menubaren er den sidste i rækken, så den jeg definerer*/
+  border-right: none;
+  /*Fjerner stregen ved kontakt */
+}
+
+li a:hover {
+  /* Menubaren - gør at den ændrer farve, når man holder hen over den */
+  color: #d6bcba;
+}
+
+/* #tekst2 {
+  font-size: 35px;
+  padding-top: 25px;
+  text-align: center;
+} */
+
+/* .float_left {
+  float: left;
+} */
+
+
+/* I stedet for dette skulle jeg have brugt Display flex og justify-content space-beetween  */
+/* Section1 = Hvor alle mine 4 billeder + Multimediedesignstuderende er */
+#section1 {
+  /*Boksen de 4 billeder er i har en padding på 50px fra toppen */
+  background: #F9F9F9;
+  padding: 50px 0px;
+}
+/* En id section1 har en class der hedder image_box_section1 og er et billede (Costume) */
+#section1 .image_box_section1 img {
+  max-width: 100%;
+  height: auto; /* Sørger for at billedet ser almindeligt ud*/
+}
+
+#section1 .image_box_section1 {
+  /*Boksen hvor Costume-billedet er i */
+  float: left;
+  width: 30%;
+  margin-right: 3%; /* Billederne i midten centreres */
+  /* Sørger for at det giver 100% */
+}
+
+#section1 .image_box_section1.magasin3 {
+  /*Den boks hvor Bo Bedre er inden i*/
+  margin-right: 0px;/*Den boks skal ligge sig op af wrapperen, så det ikke skrider ud over*/
+  width: 34%;
+}
+
+#section1 .image_box_section1.magasin3 img {
+  /* Bo bedre */
+  float: right;
+  /* At Bo Bedre placerer sig til højre i boksen */
+}
+
+/* Jeg vælger specifikt kun den h2 der hedder Multimediedesignstuderende og definerer den*/
+#section1 .intro h2 {
+  /* Tekst Multimediedesignstuderende */
+  margin-bottom: 50px;
+  /*Tekstplacering fra billederne */
+  font-weight: 700;
+  /*Tykkelse på teksten */
+  font-size: 32px;
+  color: #727171;
+  text-align: center;
+}
+
+/*Section2 = Er min kontaktboksformular */
+#section2 {
+  /*Boksen der ligger rundt om kontaktformularen */
+  padding: 50px; /*Gør at den har en fylde på 50 rundt til både tingene ovenover + footeren */
+  background: #D2D0D0;
+}
+
+#section2 .intro {
+  /* Billede + tekst under billedet placering */
+  text-align: center;
+}
+
+#section2 .intro img {
+  /*Det runde billede af mig */
+  max-height: 190px;
+  width: auto; /*Tilpasser sig til højden  */
+  border-radius: 100%;
+  /*At det bliver en cirkel */
+}
+
+/* Jeg vælger specifikt kun den h2 der hedder "Kontakt mig" og definerer den*/
+#section2 .intro h2 {
+  /*Kontakt mig overskrift */
+  text-transform: uppercase;
+  /*Skriver mere store bokstaver */
+  font-weight: 900;
+  color: black;
+  margin: 15px 0px 5px 0px;
+  /*Placering af h2*/
+}
+
+#section2 .intro p {
+  /*Teksten der beskriver kontaktformularen */
+  color: #9B9A9A;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.8; /*Linjeafstand */
+}
+
+#section2 form {
+  /*Boksene man udfylder tekst i */
+  margin-top: 50px;
+  width: 100%;
+  overflow: hidden; /* Betyder at der ikke flyde noget ud over kassen, så man kan skrive alt det tekst man vil */
+}
+
+#section2 form input, #section2 form textarea {
+  /*Navn, email + besked boks */
+  width: 100%;
+  font-weight: 600;
+  font-family: "Raleway", sans-serif;
+  padding: 12px;
+  /*Tekstbokse højde */
+  margin-bottom: 12px;
+  /*Linjeafstand mellem tekstboksene */
+  border: 1px #e6e6e6 solid; /* Rammerne rundt om + at den er fuldtoptrukken */
+  max-height: 250px; /* Sørger for at uanset hvor meget tekst man skriver bliver den ikke højere  */
+  resize: none; /* Gør så man ikke kan trække i den*/
+}
+
+#footer {
+  /*Hele footer-boksen */
+  padding: 10px; /* Giver fylde, så teksten rykker sig længere ned, men også boksen bliver større */
+  background: #727171;
+  /*Mørkegrå */
+  position: relative;
+}
+
+#footer .left_column {
+  /*Kontaktinformation skal gå til venstre */
+  float: left;
+}
+
+#footer .left_column p {
+  /*Kontaktoplysninger (-Kontaktinformation-overskrift) */
+  font-weight: 300;
+  /* Skrifttykkelse */
+  margin-bottom: 10px;
+  /*Placering*/
+  font-size: 16px;
+  /*Skriftstørrelse */
+}
+
+#footer h2 {
+  /* Kontaktinformation + Follow tekst */
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#footer .right_column {
+  /* En boks, hvor jeg har en inner boks indeni (den nedenunder) */
+  float: right;
+}
+
+#footer .right_column .inner {
+  /* Innerboksen, hvor teksten og sociale medie ikonerne er i  */
+  width: 340px;
+  /*Laver en bredde udtil wrapperen - Her skulle jeg have justeret den, så den alinede med det andet */
+}
+
+
+#footer .right_column .circles {
+  /* Sociale medier ikoner placering */
+  position: absolute; /* Glemmer placering og jeg får så lov at sige hvor dan skal placeres i linjen under*/
+  bottom: 20px; /*Placering fra bunden */
+}
+
+#footer .right_column .circles .round {
+  /*Sociale medier ikoner */
+  height: 30px;
+  width: 30px;
+  display: inline-block; /* Links jeg laver om til et element, så de kan have en højde og bredde */
+  /* Inline = viser sig på en linje  */
+  text-align: center; /* Sørger for at ikonerne tilpasser sig i cirklen */
+  padding: 10px; /* Fylden rundt om ikonet inde i cirklen*/
+  border-radius: 100%; /* Gør den rund */
+  border: 1px #e6e6e6 solid; /* Linjen er optrukken og 1px tyk */
+}
+
+/* Henviser til alle classene */  /*Sociale medier selve ikonerne */
+#footer .right_column .circles .round i {
+  font-size: 30px;
+  color: black;
+}
+/* Findes både i Om Mig + Portfolio*/
+#content_subpages {
+  padding: 50px;
+  background: white;
+}
+/* De tre billeder i portfolio */
+#content_subpages .portfolio_item .image {
+  width: 48%;
+  float: left;
+  margin-right: 2%;
+}
+/* Animation portfolio */
+#content_subpages .portfolio_item .animation {
+  width: 300px;
+}
+
+.animation-size {
+  /*Animation portfolio */
+  transform: scale(1.91);
+  /* Størrelsen - 1 scale = 100%.Jeg gør derfor billedet større end det er*/
+  position: relative;
+  left: 46%;
+  top: 120px;
+  margin-bottom: 250px;
+}
+
+.sprite {
+  /* Animation portfolio */
+  width: 300px;
+  height: 270px;
+  background: url("../images/pingvincss.png") 0 0 no-repeat;
+  /* Gør så billedet ikke gentager sig, men kun vises en gang */
+  animation: play 1.5s steps(10) infinite;
+  /* Definerer hvor lang tid den skal tage, hvor mange steps og at den skal blive ved uendeligt */
+}
+
+@keyframes play {
+  /* Definerer hvordan den skal bevæge sig hen af aksen */
+  0% {
+    background-position: 0px;
+  }
+  100% {
+    background-position: -3000px;
+  }
+}
+
+#content_subpages .portfolio_item.reversed .image {
+  /* Får Costume og Floating Island til at placere sig til højre  */
+  margin-right: auto;
+  margin-left: 2%;
+}
+/* Portfolio - Får billederne til at være i original størrelse */
+#content_subpages .image img {
+  width: 100%;
+}
+/* Billedernes og teksten placering i forhold til hinanden */
+#content_subpages .portfolio_item {
+  margin-bottom: 30px;
+}
+/*Alt placering på portfolio - gør siden deler sig op i 2 */
+#content_subpages .portfolio_item .text {
+  float: left;
+  width: 50%;
+}
+
+/* Portfolio overskrifter */
+#content_subpages .portfolio_item .text .inner_text h2 {
+  display: block;
+  font-weight: 300;
+  font-size: 24px; /*Overskrifter størrelse */
+  text-align: center; /*Sætter teksten i midten*/
+  margin-bottom: 10px; /*Brødtekstens placering i forhold til overskriften*/
+  padding-bottom: 10px;
+  color: #b9babb;
+  border-bottom: 2px #d6bcba solid;
+}
+
+/* Redigerer i brødteksten på portfoliosiden*/
+#content_subpages .text .inner_text p {
+  font-size: 16px;
+  line-height: 2;
+  font-weight: 400;
+}
+
+/* Om mig billede + min tekst om mig   */
+#content_subpages .right_omos_section, #content_subpages .left_omos_section {
+  float: left;
+  width: 50%;
+}
+
+/*Billedet af mig "Om mig" */
+#content_subpages .left_omos_section .picture {
+  width: 90%;
+  height: 700px;
+  background-size: cover; /* Jeg fylder boksen med billedet  */
+  background-position: top; /* Den ligger sig øverst i boksen */
+}
+
+  /* Om mig - "Profil + understregningen" */
+#content_subpages .right_omos_section .inner {
+  padding: 20px;
+  border: 1px #e6e6e6 solid;
+}
+
+/*Om mig - Profil */
+#content_subpages .right_omos_section .inner h2 {
+  display: block; /* Gør at jeg kan ændre på teksten */
+  font-weight: 300;
+  font-size: 24px;
+  text-align: center;
+  margin-bottom: 10px;
+  padding-bottom: 10px; /* Den kunne godt have været undladt, hvis jeg brugte margin-bottom: 20px */
+  color: #b9babb;
+  border-bottom: 2px #d6bcba solid;
+}
+
+/*Om mig - brødtekst */
+#content_subpages .right_omos_section .inner p {
+  font-size: 16px;
+  line-height: 1.7;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+/*Boksen for kompetencer (om mig)*/
+#om_mig_hvorfor {
+  padding: 40px;
+  background: #ebe0e0;
+}
+ /*Kompetenceboks (om mig) farve + størrelse */
+#om_mig_hvorfor .inner {
+  background: #Efe5e5;
+  padding: 20px;
+}
+
+/* FEJL - fordi jeg ikke har nogen h2 tag i id #om_mig_hvorfor inner-classen */
+#om_mig_hvorfor .inner h2 {
+  font-weight: 900;
+  margin-bottom: 30px;
+}
+/* FEJL - fordi jeg ikke har noget p-tag i id #om_mig_hvorfor inner-classen */
+#om_mig_hvorfor .inner p {
+  font-size: 200px;
+  margin-bottom: 30px;
+}
+
+#copyright {
+  /*Copyright footer */
+  padding: 15px;
+  background: #8FA890; /*Mørkegrønne */
+  text-align: center;
+}
